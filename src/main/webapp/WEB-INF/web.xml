@@ -17,6 +17,14 @@
   	<servlet-name>springmvc</servlet-name>
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
- 
-
 </web-app>
+<!--	
+	.classpath文件下面
+	^^^^^^^^^^^^^^^
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>  没有这段话则会出现ClassNotFound的错误
+		</attributes>
+	</classpathentry>
+-->
