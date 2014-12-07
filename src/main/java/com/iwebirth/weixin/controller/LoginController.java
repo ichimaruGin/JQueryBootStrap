@@ -16,20 +16,22 @@ import org.springframework.web.servlet.ModelAndView;
 public class LoginController {
 	
 	@RequestMapping(value={"/"})
-	public String start(HttpServletRequest request) throws UnsupportedEncodingException{
+	public String start(HttpServletRequest request,ModelMap model) throws UnsupportedEncodingException{
 		request.setCharacterEncoding("UTF-8");
+		model.put("navi_foucs", "login");
 		return "login";
 	}
 	@RequestMapping(value={"/{param}"})
-	public String start(HttpServletRequest request,@PathVariable String param) throws UnsupportedEncodingException{
+	public String start(HttpServletRequest request,@PathVariable String param,ModelMap model) throws UnsupportedEncodingException{
 		request.setCharacterEncoding("UTF-8");
+		model.put("navi_foucs", "login");
 		return "login";
 	}
 	@RequestMapping(value={"/login/{timestamp}"})
 	public String logincheck(@PathVariable String timestamp,HttpServletRequest request,HttpServletResponse response,ModelMap model){
 		System.out.println("本次Login时间--->"+timestamp);
 		System.out.println(request.getParameter("email")+request.getParameter("password"));
-		model.put("login", "OK");
+		model.put("navi_foucs", "contact");
 		return "contact";
 	}
 	

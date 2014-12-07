@@ -27,9 +27,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">登陆</a></li>
-            <li><a href="#about">关于</a></li>
-            <li><a href="#contact">联系</a></li>
+            <li class="<%if(request.getAttribute("navi_foucs").equals("login"))out.write("active");else out.write("");%>"><a href="#">登陆</a></li>  <!-- class="active" -->
+            <li class="<%if(request.getAttribute("navi_foucs").equals("about"))out.write("active");else out.write("");%>"><a href="#about">关于</a></li>
+            <li class="<%if(request.getAttribute("navi_foucs").equals("contact"))out.write("active");else out.write("");%>"><a href="#contact">联系</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
