@@ -35,4 +35,10 @@
 	<mvc:resources mapping="/resource/**" location="/resource/" cache-period="86400"/>  
 	<mvc:resources mapping="/*"  location="/"  cache-period="86400" />
 	
+	<mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.iwebirth.weixin.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
