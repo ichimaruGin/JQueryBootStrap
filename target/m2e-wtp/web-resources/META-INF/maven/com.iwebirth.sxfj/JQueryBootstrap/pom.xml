@@ -9,6 +9,7 @@
   
   <properties>
    	<spring.version>3.2.4.RELEASE</spring.version>
+   	<jackson.version>1.9.10</jackson.version>
   </properties>
  
 
@@ -57,6 +58,12 @@
             <artifactId>jsp-api</artifactId>
             <version>2.1</version>
             <scope>provided</scope>
+        </dependency>
+     <!-- Jackson JSON Mapper -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
     <dependency>
       <groupId>junit</groupId>
